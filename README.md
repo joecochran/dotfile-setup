@@ -11,9 +11,11 @@ My dotfile setup for zsh, tmux, and vim.
 * powerline (optional)
 
 ## installation
-`git clone https://github.com/joecochran/dotfiles.git`
-`cd dotfiles`
-`./install.sh
+```bash
+git clone https://github.com/joecochran/dotfiles.git
+cd dotfiles
+./install.sh
+```
 
 ## license
 This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
