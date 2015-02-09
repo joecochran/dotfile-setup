@@ -19,7 +19,6 @@ se t_Co=16
 set background=dark
 colorscheme solarized
 set encoding=utf-8 " Necessary to show Unicode glyphs
-"let g:NERDTreeDirArrows=0
 
 " Write the old file out when switching between files.
 set autowrite
@@ -106,11 +105,6 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-" NERDTree
-"Shortcut for NERDTreeToggle
-nmap <C-b> :NERDTreeToggle<cr>
-"Show hidden files in NerdTree
-let NERDTreeShowHidden=1
 
 au FocusLost * :wa
 
@@ -122,11 +116,24 @@ nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 :command! SortCSS :g#\({\n\)\@<=#.,/}/sort
 
 nmap <leader>w :w!<cr>
+
+
+
+"===============PLUGIN SETTINGS=============="
+
+"EMMET
+
+" let g:user_emmet_leader_key='<C-Z>'
+
+
+"NERDTREE
+"let g:NERDTreeDirArrows=0
+"Shortcut for NERDTreeToggle
+nmap <C-b> :NERDTreeToggle<cr>
+"Show hidden files in NerdTree
+let NERDTreeShowHidden=1
+
+"TCOMMENT
 "Faster shortcut for commenting. Requires T-Comment plugin
 map <leader>c <c-_><c-_>
 
-" Emmet stuff
-" let g:user_emmet_leader_key='<C-Z>'
-
-" Powerline for vim
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
