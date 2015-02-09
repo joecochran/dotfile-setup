@@ -117,23 +117,24 @@ nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
 nmap <leader>w :w!<cr>
 
-
-
 "===============PLUGIN SETTINGS=============="
 
 "EMMET
 
 " let g:user_emmet_leader_key='<C-Z>'
 
+"===========NERDTREE==============="
 
-"NERDTREE
-"let g:NERDTreeDirArrows=0
-"Shortcut for NERDTreeToggle
+"HIDE ARROWS IF NECESSARY
+"let g:NERDTreeDirArrows=0  
+
+"Ctrl-B for nerdtree toggle
 nmap <C-b> :NERDTreeToggle<cr>
+
 "Show hidden files in NerdTree
 let NERDTreeShowHidden=1
 
-"TCOMMENT
+"===================TCOMMENT
 "Faster shortcut for commenting. Requires T-Comment plugin
 map <leader>c <c-_><c-_>
 
