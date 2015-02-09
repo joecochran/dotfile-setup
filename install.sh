@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash"
 
 #store installer directory for later
 APPDIR=`pwd`
