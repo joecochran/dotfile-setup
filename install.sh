@@ -1,12 +1,12 @@
-#!/bin/bash"
+#!/bin/bash
 
 #store installer directory for later
 APPDIR=`pwd`
-if [ -z ${POWERLINE_COMMAND+x} ]; then
-    echo "\npowerline is not installed, powerline will be skipped on all applications."
-else
-    location=$(pip show powerline-status | sed -n '4p' | sed 's/Location: //')
-fi
+#if [ -z ${POWERLINE_COMMAND+x} ]; then
+#    echo "\npowerline is not installed, powerline will be skipped on all applications."
+#else
+    location=$(pip3 show powerline-status | sed -n '10p' | sed 's/Location: //')
+#fi
 
 #ZSH SETUP
 app=zsh
@@ -23,12 +23,12 @@ else
     echo -e "\nAdding aliases"
     echo -e "\n#Aliases\n$(cat $APPDIR/zsh/aliases.zsh)" >> ~/.zshrc
 
-    if [ -z ${POWERLINE_COMMAND+x} ]; then
-        echo "skipping powerline setup for $app"
-    else
+#    if [ -z ${POWERLINE_COMMAND+x} ]; then
+#        echo "skipping powerline setup for $app"
+#    else
         echo -e "Adding Powerline to $app"
         echo -e "\n#Powerline\n. ${location}/powerline/bindings/zsh/powerline.zsh" >> ~/.zshrc
-    fi
+#    fi
 fi
 
 #TMUX SETUP
@@ -38,13 +38,13 @@ if ! type "$app" > /dev/null 2>&1; then
 else
     echo -e "\nSetting up $app"
     cp $APPDIR/tmux.conf ~/.tmux.conf
-    if [ -z ${POWERLINE_COMMAND+x} ]; then
-        echo -e "skipping powerline setup for $app"
-    else
+#    if [ -z ${POWERLINE_COMMAND+x} ]; then
+#        echo -e "skipping powerline setup for $app"
+#    else
         echo -e "Adding Powerline to vim"
         echo -e "run-shell \"powerline-daemon -q\"" >> .tmux.conf
         echo -e "source ${location}/powerline/bindings/tmux/powerline.conf" >> ~/.tmux.conf
-    fi
+#    fi
     echo -e "\n$app setup complete"
 fi
 
@@ -86,13 +86,13 @@ else
     printf "\nInstalling vimrc\n"
     cp $APPDIR/vimrc ~/.vimrc
     #check for powerline, and if so add snippet to vimrc
-    if [ -z ${POWERLINE_COMMAND+x} ]; then
-        echo "skipping powerline setup for $app"
-    else
+ #   if [ -z ${POWERLINE_COMMAND+x} ]; then
+ #       echo "skipping powerline setup for $app"
+ #   else
         #let's get the location of powerline
         echo -e "Adding Powerline to vim"
         echo "source ${location}/powerline/bindings/vim/plugin/powerline.vim" >> ~/.vimrc
-    fi
+ #   fi
     printf "\n$app setup complete"
 fi
 
