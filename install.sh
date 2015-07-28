@@ -41,7 +41,7 @@ else
 #    if [ -z ${POWERLINE_COMMAND+x} ]; then
 #        echo -e "skipping powerline setup for $app"
 #    else
-        echo -e "Adding Powerline to vim"
+        echo -e "Adding Powerline to $app"
         echo -e "run-shell \"powerline-daemon -q\"" >> .tmux.conf
         echo -e "source ${location}/powerline/bindings/tmux/powerline.conf" >> ~/.tmux.conf
 #    fi
@@ -90,7 +90,7 @@ else
  #       echo "skipping powerline setup for $app"
  #   else
         #let's get the location of powerline
-        echo -e "Adding Powerline to vim"
+        echo -e "Adding Powerline to $app"
         echo "source ${location}/powerline/bindings/vim/plugin/powerline.vim" >> ~/.vimrc
  #   fi
     printf "\n$app setup complete"
