@@ -32,6 +32,7 @@ else
 fi
 
 #TMUX SETUP
+pip3 install psutil
 app=tmux
 if ! type "$app" > /dev/null 2>&1; then
     echo -e "\ncommand $app is not installed, skipping."
@@ -42,7 +43,7 @@ else
 #        echo -e "skipping powerline setup for $app"
 #    else
         echo -e "Adding Powerline to $app"
-        echo -e "run-shell \"powerline-daemon -q\"" >> .tmux.conf
+        echo -e "run-shell \"powerline-daemon -q\"" >> ~/.tmux.conf
         echo -e "source ${location}/powerline/bindings/tmux/powerline.conf" >> ~/.tmux.conf
 #    fi
     echo -e "\n$app setup complete"
