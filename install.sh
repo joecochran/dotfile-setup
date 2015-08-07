@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#this is a comment, hello.
+
 #store installer directory for later
 APPDIR=`pwd`
 #if [ -z ${POWERLINE_COMMAND+x} ]; then
