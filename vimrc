@@ -138,3 +138,6 @@ let NERDTreeShowHidden=1
 "Faster shortcut for commenting. Requires T-Comment plugin
 map <leader>c <c-_><c-_>
 
+"More natural splitting
+set splitbelow
+set splitright
