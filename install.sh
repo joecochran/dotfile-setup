@@ -85,6 +85,10 @@ else
     printf "\nInstalling vim-colors-solarized\n"
     git clone https://github.com/altercation/vim-colors-solarized.git
 
+    #ctrlp
+    printf "\nInstalling ctrlp\n"
+    git clone https://github.com/ctrlpvim/ctrlp.vim.git
+
     #install vimrc
     printf "\nInstalling vimrc\n"
     cp $APPDIR/vimrc ~/.vimrc

@@ -134,9 +134,23 @@ nmap <C-b> :NERDTreeToggle<cr>
 "Show hidden files in NerdTree
 let NERDTreeShowHidden=1
 
+" Have NERDTree ignore vim swap files
+let NERDTreeIgnore = ['\.swp$']
+
 "===================TCOMMENT
 "Faster shortcut for commenting. Requires T-Comment plugin
 map <leader>c <c-_><c-_>
+
+"===GnuPG stuff===
+" :cmap cs %!gpg --clearsign
+" :cmap es %!gpg -seat
+"map <leader>ee %!gpg -eat
+" :cmap de %!gpg -d
+
+"========Ctrl P========
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_working_path_mode = '0'
+source /usr/local/lib/python3.4/site-packages/powerline/bindings/vim/plugin/powerline.vim
 
 "More natural splitting
 set splitbelow
